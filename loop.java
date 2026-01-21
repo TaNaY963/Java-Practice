@@ -3,7 +3,7 @@ public class Loop
     public static void main(String[] args)
     {
       int i=0;
-      while(i<=5)
+      while(i<=5) // while loop
       {
         System.out.println("Hello");
         int j=1;
@@ -13,6 +13,10 @@ public class Loop
             j++;
         }
         i++;
+      }
+      for(int i=0 ;i<5;i++)//for loop
+      {
+        System.out.println(i);
       }
 
 
