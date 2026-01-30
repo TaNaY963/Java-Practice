@@ -1,4 +1,4 @@
-public class Exceptions
+public class ExceptionHandling
 {
     public static void main(String[] args)
     {
@@ -9,17 +9,19 @@ public class Exceptions
       try
       {
         j = 18/i; // divided by zero Exception
-        System.out.println(arr[5]); //IndexOutOfBound Exception
-        System.out.println(str.length()); // NullPointerException
+        if(j==0){
+            throw new ArithmeticException(); // use throw keyword to call catch block of ArithmeticException
+        }
 
       }
       catch(ArithmeticException e)
       {
-        System.out.println("Cannot Divide by Zero");
+        j=18/1;// handling the divide by zero 
+        System.out.println("Thats the default output" + e);
       }
       catch(Exception e) // parent class of all the Exceptions
       {
-        System.out.println("Something went wrong");
+        System.out.println("Something went wrong" + e);
       } 
 
       System.out.println(j);
